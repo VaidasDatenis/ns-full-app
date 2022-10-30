@@ -36,8 +36,7 @@
   "files": [
     "./src/main.ts",
     "./references.d.ts",
-    "./src/polyfills.ts",
-    "./.eslintrc.json"
+    "./src/polyfills.ts"
   ],
   "exclude": [
     "node_modules",

@@ -1,33 +1,19 @@
-<ActionBar title=""NativeFlix></ActionBar>
-<ListView height="100%" separatorColor="transparent" [items]="flicks" (itemTap)="onFlickTap($event)">
+<ActionBar NativeFlix>
+  <StackLayout orientation="horizontal">
+    <button class="log-in-buttons" text="Sign In" (tap)="handleSignIn()" ios.position="right"></button>
+    <button class="log-in-buttons" text="Sign Up" (tap)="handleSignUp()" ios.position="left"></button>
+  </StackLayout>
+</ActionBar>
+<ListView height="100%" separatorColor="transparent" [items]="flicks" (itemTap)="onFlickTap($any($event))">
   <ng-template let-item="item">
-    <StackLayout>
-      <GridLayout
-        height="280"
-        rows="*, auto, auto"
-        columns="*"
-        class="bg-secondary"
-        borderRadius="10"
-        margin="5 10"
-        padding="0"
-      >
+    <StackLayout orientation="horizontal">
+      <GridLayout height="280" rows="*, auto, auto" columns="*" class="bg-secondary" borderRadius="10" margin="5 10"
+        padding="0">
         <Image row="0" margin="0" stretch="aspectFill" [src]="item.image"></Image>
-        <Label
-          row="1"
-          margin="10 10 0 10"
-          fontWeight="700"
-          class="text-primary"
-          fontSize="18"
-          [text]="item.title"
-        ></Label>
-        <Label
-          row="2"
-          margin="0 10 10 10"
-          class="text-secondary"
-          fontSize="14"
-          textWrap="true"
-          [text]="item.description"
-        ></Label>
+        <Label row="1" margin="10 10 0 10" fontWeight="700" class="text-primary" fontSize="18"
+          [text]="item.title"></Label>
+        <Label row="2" margin="0 10 10 10" class="text-secondary" fontSize="14" textWrap="true"
+          [text]="item.description"></Label>
       </GridLayout>
     </StackLayout>
   </ng-template>

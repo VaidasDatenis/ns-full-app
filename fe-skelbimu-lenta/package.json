@@ -3,6 +3,7 @@
   "main": "./src/main.ts",
   "version": "1.0.0",
   "private": true,
+  "scripts": {},
   "dependencies": {
     "@angular-eslint/schematics": "^14.1.2",
     "@angular/animations": "~14.2.0",
