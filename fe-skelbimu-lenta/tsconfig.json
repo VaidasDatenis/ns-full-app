@@ -8,14 +8,40 @@
     "noEmitHelpers": true,
     "noEmitOnError": true,
     "skipLibCheck": true,
-    "lib": ["es2017", "dom"],
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "@/*": ["src/*"]
+      "~/*": [
+        "src/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["src/tests/**/*.ts", "src/**/*.ios.ts", "src/**/*.android.ts"],
-  "files": ["./src/main.ts", "./references.d.ts", "./src/polyfills.ts"],
-  "exclude": ["node_modules", "platforms", "e2e"]
+  "angularCompilerOptions": {
+    "strict": true,
+    "strictTemplates": true,
+  },
+  "include": [
+    "src/tests/**/*.ts",
+    "src/**/*.ios.ts",
+    "src/**/*.android.ts"
+  ],
+  "files": [
+    "./src/main.ts",
+    "./references.d.ts",
+    "./src/polyfills.ts",
+    "./.eslintrc.json"
+  ],
+  "exclude": [
+    "node_modules",
+    "platforms",
+    "e2e"
+  ]
 }
