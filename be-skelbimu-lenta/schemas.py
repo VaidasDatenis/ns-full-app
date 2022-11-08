@@ -5,6 +5,8 @@ class PlainItemSchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)
     price = fields.Float(required=True)
+    # description = fields.Str()
+    # private = fields.Bool()
 
 class PlainStoreSchema(Schema):
     id = fields.Int(dump_only=True)
@@ -18,6 +20,7 @@ class ItemUpdateSchema(Schema):
     name = fields.Str()
     price = fields.Float()
     store_id = fields.Int()
+    # private = fields.Bool()
 
 class ItemSchema(PlainItemSchema):
     store_id = fields.Int(required=True, load_only=True)
@@ -42,3 +45,4 @@ class UserSchema(Schema):
     id = fields.Int(dump_only=True)
     username = fields.Str(required=True)
     password = fields.Str(required=True, load_only=True)
+    # retailer = fields.Bool(required=True)
