@@ -1,7 +1,7 @@
-<ActionBar NativeFlix>
+<ActionBar title="back" NativeFlix ios.position="left">
   <StackLayout orientation="horizontal">
-    <button class="log-in-buttons" text="Sign In" (tap)="handleSignIn()" ios.position="right"></button>
-    <button class="log-in-buttons" text="Sign Up" (tap)="handleSignUp()" ios.position="left"></button>
+    <button class="log-in-button" text="Sign Ip" (tap)="handleSignIn()" ios.position="right"></button>
+    <button class="log-in-button" text="Sign Up" (tap)="handleSignUp()" ios.position="left"></button>
   </StackLayout>
 </ActionBar>
 <ListView height="100%" separatorColor="transparent" [items]="flicks" (itemTap)="onFlickTap($any($event))">

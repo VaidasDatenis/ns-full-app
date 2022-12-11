@@ -15,12 +15,20 @@ export class DetailsComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private flickService: FlickService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const id = +this.activatedRoute.snapshot.params.id
     if (id) {
       this.flick = this.flickService.getFlickById(id)
     }
+  }
+
+  onShare() {
+    console.log("share")
+  }
+
+  onDelete() {
+    console.log("Delete")
   }
 }
